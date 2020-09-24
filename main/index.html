@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>QianKun Example</title>
+</head>
+
+<body>
+  <div class="mainapp">
+    <!-- 标题栏 -->
+    <header class="mainapp-header">
+      <h1>QianKun</h1>
+    </header>
+    <div class="mainapp-main">
+      <!-- 侧边栏 -->
+      <ul class="mainapp-sidemenu">
+        <li onclick="push('/react16')">React16</li>
+        <li onclick="push('/vue')">Vue</li>
+      </ul>
+      <!-- 子应用  -->
+      <main id="subapp-container"></main>
+    </div>
+  </div>
+  <script>
+    function push(subapp) {
+      //调用html原生接口 
+      //history.pushState()主要是在不刷新浏览器的情况下，创建新的浏览记录并插入浏览记录队列中。
+      //https://www.cnblogs.com/sh-zj/p/9714467.html
+      console.log('调用 history.pushState :', subapp)
+      history.pushState(null, "", subapp)
+    }
+  </script>
+</body>
+
+</html>
