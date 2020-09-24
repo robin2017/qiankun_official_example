@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "install:main":"cd main && npm i",
+    "install:react":"cd react16 && npm i",
+    "install:vue":"cd vue && npm i",
+    "install:all":"npm-run-all -p install:main install:react install:vue",
     "dev:main": "cd main && npm run start",
     "dev:react": "cd react16 && npm run start",
     "dev:vue": "cd vue && npm run start",
